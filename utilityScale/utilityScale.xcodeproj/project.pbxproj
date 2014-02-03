@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38D00182189F68C800968B24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00181189F68C800968B24 /* Foundation.framework */; };
+		38D00184189F68C800968B24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00183189F68C800968B24 /* CoreGraphics.framework */; };
+		38D00186189F68C800968B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00185189F68C800968B24 /* UIKit.framework */; };
+		38D0018C189F68C800968B24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38D0018A189F68C800968B24 /* InfoPlist.strings */; };
+		38D0018E189F68C800968B24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0018D189F68C800968B24 /* main.m */; };
+		38D00192189F68C800968B24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D00191189F68C800968B24 /* AppDelegate.m */; };
+		38D00195189F68C800968B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D00193189F68C800968B24 /* Main.storyboard */; };
+		38D00198189F68C800968B24 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D00197189F68C800968B24 /* MainViewController.m */; };
+		38D0019B189F68C800968B24 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0019A189F68C800968B24 /* FlipsideViewController.m */; };
+		38D0019D189F68C800968B24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D0019C189F68C800968B24 /* Images.xcassets */; };
+		38D001A4189F68C800968B24 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D001A3189F68C800968B24 /* XCTest.framework */; };
+		38D001A5189F68C800968B24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00181189F68C800968B24 /* Foundation.framework */; };
+		38D001A6189F68C800968B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00185189F68C800968B24 /* UIKit.framework */; };
+		38D001AE189F68C800968B24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38D001AC189F68C800968B24 /* InfoPlist.strings */; };
+		38D001B0189F68C800968B24 /* utilityScaleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D001AF189F68C800968B24 /* utilityScaleTests.m */; };
+		38D001CA189F699900968B24 /* 01 Major Pentatonic 1st mode acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001BA189F699900968B24 /* 01 Major Pentatonic 1st mode acoustic.m4a */; };
+		38D001CB189F699900968B24 /* 01 Major Pentatonic 1st mode electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001BB189F699900968B24 /* 01 Major Pentatonic 1st mode electric.m4a */; };
+		38D001CC189F699900968B24 /* 02 Major Pentatonic 2nd mode acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001BC189F699900968B24 /* 02 Major Pentatonic 2nd mode acoustic.m4a */; };
+		38D001CD189F699900968B24 /* 02 Major Pentatonic 2nd mode electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001BD189F699900968B24 /* 02 Major Pentatonic 2nd mode electric.m4a */; };
+		38D001CE189F699900968B24 /* 03 Mixolydian 5th mode acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001BE189F699900968B24 /* 03 Mixolydian 5th mode acoustic.m4a */; };
+		38D001CF189F699900968B24 /* 03 Mixolydian 5th mode electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001BF189F699900968B24 /* 03 Mixolydian 5th mode electric.m4a */; };
+		38D001D0189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C0189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major acoustic.m4a */; };
+		38D001D1189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C1189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major electric.m4a */; };
+		38D001D2189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C2189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 acoustic.m4a */; };
+		38D001D3189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C3189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 electric.m4a */; };
+		38D001D4189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C4189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian acoustic.m4a */; };
+		38D001D5189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C5189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian electric.m4a */; };
+		38D001D6189F699900968B24 /* 07 Aelian and Phtygian acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C6189F699900968B24 /* 07 Aelian and Phtygian acoustic.m4a */; };
+		38D001D7189F699900968B24 /* 07 Aelian and Phtygian electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C7189F699900968B24 /* 07 Aelian and Phtygian electric.m4a */; };
+		38D001D8189F699900968B24 /* 08 Phrygian Dominant acoustic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C8189F699900968B24 /* 08 Phrygian Dominant acoustic.m4a */; };
+		38D001D9189F699900968B24 /* 08 Phrygian Dominant electric.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 38D001C9189F699900968B24 /* 08 Phrygian Dominant electric.m4a */; };
+		38D001F1189F69A100968B24 /* 01 Major Pentatonic, 1st mode Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001DB189F69A100968B24 /* 01 Major Pentatonic, 1st mode Acoustic.png */; };
+		38D001F2189F69A100968B24 /* 01 Major Pentatonic, 1st mode.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001DC189F69A100968B24 /* 01 Major Pentatonic, 1st mode.png */; };
+		38D001F3189F69A100968B24 /* 02 Major Pentatonic, 2nd mode Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001DD189F69A100968B24 /* 02 Major Pentatonic, 2nd mode Acoustic.png */; };
+		38D001F4189F69A100968B24 /* 02 Major Pentatonic, 2nd mode.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001DE189F69A100968B24 /* 02 Major Pentatonic, 2nd mode.png */; };
+		38D001F5189F69A100968B24 /* 03 Mixolydian Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001DF189F69A100968B24 /* 03 Mixolydian Acoustic.png */; };
+		38D001F6189F69A100968B24 /* 03 Mixolydian.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E0189F69A100968B24 /* 03 Mixolydian.png */; };
+		38D001F7189F69A100968B24 /* 04 Minor Pentatonic, 5th of major Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E1189F69A100968B24 /* 04 Minor Pentatonic, 5th of major Acoustic.png */; };
+		38D001F8189F69A100968B24 /* 04 Minor Pentatonic, 5th of major.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E2189F69A100968B24 /* 04 Minor Pentatonic, 5th of major.png */; };
+		38D001F9189F69A100968B24 /* 05 Blues Minor Hexatonic Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E3189F69A100968B24 /* 05 Blues Minor Hexatonic Acoustic.png */; };
+		38D001FA189F69A100968B24 /* 05 Blues Minor Hexatonic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E4189F69A100968B24 /* 05 Blues Minor Hexatonic.png */; };
+		38D001FB189F69A100968B24 /* 06 Dominant bebop Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E5189F69A100968B24 /* 06 Dominant bebop Acoustic.png */; };
+		38D001FC189F69A100968B24 /* 06 Dominant bebop.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E6189F69A100968B24 /* 06 Dominant bebop.png */; };
+		38D001FD189F69A100968B24 /* 07 Aeolian Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E7189F69A100968B24 /* 07 Aeolian Acoustic.png */; };
+		38D001FE189F69A100968B24 /* 07 Aeolian.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E8189F69A100968B24 /* 07 Aeolian.png */; };
+		38D001FF189F69A100968B24 /* 08 Phrygian Acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001E9189F69A100968B24 /* 08 Phrygian Acoustic.png */; };
+		38D00200189F69A100968B24 /* 08 Phrygian.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001EA189F69A100968B24 /* 08 Phrygian.png */; };
+		38D00201189F69A100968B24 /* icon 160 x 180  acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001EB189F69A100968B24 /* icon 160 x 180  acoustic.png */; };
+		38D00202189F69A100968B24 /* icon 160 x 180  electric.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001EC189F69A100968B24 /* icon 160 x 180  electric.png */; };
+		38D00203189F69A100968B24 /* icon 80 x 90 acoustic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001ED189F69A100968B24 /* icon 80 x 90 acoustic.png */; };
+		38D00204189F69A100968B24 /* icon 80 x 90 electric.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001EE189F69A100968B24 /* icon 80 x 90 electric.png */; };
+		38D00205189F69A100968B24 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001EF189F69A100968B24 /* pause.png */; };
+		38D00206189F69A100968B24 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D001F0189F69A100968B24 /* play.png */; };
+		38D0020B189F69AA00968B24 /* PlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D00208189F69AA00968B24 /* PlayButton.m */; };
+		38D0020C189F69AA00968B24 /* Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0020A189F69AA00968B24 /* Scale.m */; };
+		38D0020F189F69B900968B24 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0020E189F69B900968B24 /* AudioPlayer.m */; };
+		38D00211189F6A2B00968B24 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D00210189F6A2B00968B24 /* Default-Landscape~ipad.png */; };
+		38D00213189F6D3C00968B24 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00212189F6D3C00968B24 /* AudioToolbox.framework */; };
+		38D00215189F6D5A00968B24 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D00214189F6D5A00968B24 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38D001A7189F68C800968B24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38D00176189F68C800968B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38D0017D189F68C800968B24;
+			remoteInfo = utilityScale;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38D0017E189F68C800968B24 /* utilityScale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = utilityScale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D00181189F68C800968B24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38D00183189F68C800968B24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		38D00185189F68C800968B24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		38D00189189F68C800968B24 /* utilityScale-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "utilityScale-Info.plist"; sourceTree = "<group>"; };
+		38D0018B189F68C800968B24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38D0018D189F68C800968B24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38D0018F189F68C800968B24 /* utilityScale-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "utilityScale-Prefix.pch"; sourceTree = "<group>"; };
+		38D00190189F68C800968B24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38D00191189F68C800968B24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38D00194189F68C800968B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38D00196189F68C800968B24 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		38D00197189F68C800968B24 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		38D00199189F68C800968B24 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		38D0019A189F68C800968B24 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		38D0019C189F68C800968B24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		38D001A2189F68C800968B24 /* utilityScaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = utilityScaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D001A3189F68C800968B24 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		38D001AB189F68C800968B24 /* utilityScaleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "utilityScaleTests-Info.plist"; sourceTree = "<group>"; };
+		38D001AD189F68C800968B24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38D001AF189F68C800968B24 /* utilityScaleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = utilityScaleTests.m; sourceTree = "<group>"; };
+		38D001BA189F699900968B24 /* 01 Major Pentatonic 1st mode acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Major Pentatonic 1st mode acoustic.m4a"; sourceTree = "<group>"; };
+		38D001BB189F699900968B24 /* 01 Major Pentatonic 1st mode electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Major Pentatonic 1st mode electric.m4a"; sourceTree = "<group>"; };
+		38D001BC189F699900968B24 /* 02 Major Pentatonic 2nd mode acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Major Pentatonic 2nd mode acoustic.m4a"; sourceTree = "<group>"; };
+		38D001BD189F699900968B24 /* 02 Major Pentatonic 2nd mode electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Major Pentatonic 2nd mode electric.m4a"; sourceTree = "<group>"; };
+		38D001BE189F699900968B24 /* 03 Mixolydian 5th mode acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Mixolydian 5th mode acoustic.m4a"; sourceTree = "<group>"; };
+		38D001BF189F699900968B24 /* 03 Mixolydian 5th mode electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03 Mixolydian 5th mode electric.m4a"; sourceTree = "<group>"; };
+		38D001C0189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Minor Pentatonic 5th mode of Major acoustic.m4a"; sourceTree = "<group>"; };
+		38D001C1189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04 Minor Pentatonic 5th mode of Major electric.m4a"; sourceTree = "<group>"; };
+		38D001C2189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05 Blues Minor Hexatonic Minor Pentatonic dim 5 acoustic.m4a"; sourceTree = "<group>"; };
+		38D001C3189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "05 Blues Minor Hexatonic Minor Pentatonic dim 5 electric.m4a"; sourceTree = "<group>"; };
+		38D001C4189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06 Dominant Bebop raisd 7th to Mixolydian acoustic.m4a"; sourceTree = "<group>"; };
+		38D001C5189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "06 Dominant Bebop raisd 7th to Mixolydian electric.m4a"; sourceTree = "<group>"; };
+		38D001C6189F699900968B24 /* 07 Aelian and Phtygian acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07 Aelian and Phtygian acoustic.m4a"; sourceTree = "<group>"; };
+		38D001C7189F699900968B24 /* 07 Aelian and Phtygian electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07 Aelian and Phtygian electric.m4a"; sourceTree = "<group>"; };
+		38D001C8189F699900968B24 /* 08 Phrygian Dominant acoustic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08 Phrygian Dominant acoustic.m4a"; sourceTree = "<group>"; };
+		38D001C9189F699900968B24 /* 08 Phrygian Dominant electric.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "08 Phrygian Dominant electric.m4a"; sourceTree = "<group>"; };
+		38D001DB189F69A100968B24 /* 01 Major Pentatonic, 1st mode Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01 Major Pentatonic, 1st mode Acoustic.png"; sourceTree = "<group>"; };
+		38D001DC189F69A100968B24 /* 01 Major Pentatonic, 1st mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01 Major Pentatonic, 1st mode.png"; sourceTree = "<group>"; };
+		38D001DD189F69A100968B24 /* 02 Major Pentatonic, 2nd mode Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02 Major Pentatonic, 2nd mode Acoustic.png"; sourceTree = "<group>"; };
+		38D001DE189F69A100968B24 /* 02 Major Pentatonic, 2nd mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02 Major Pentatonic, 2nd mode.png"; sourceTree = "<group>"; };
+		38D001DF189F69A100968B24 /* 03 Mixolydian Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03 Mixolydian Acoustic.png"; sourceTree = "<group>"; };
+		38D001E0189F69A100968B24 /* 03 Mixolydian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03 Mixolydian.png"; sourceTree = "<group>"; };
+		38D001E1189F69A100968B24 /* 04 Minor Pentatonic, 5th of major Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04 Minor Pentatonic, 5th of major Acoustic.png"; sourceTree = "<group>"; };
+		38D001E2189F69A100968B24 /* 04 Minor Pentatonic, 5th of major.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04 Minor Pentatonic, 5th of major.png"; sourceTree = "<group>"; };
+		38D001E3189F69A100968B24 /* 05 Blues Minor Hexatonic Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05 Blues Minor Hexatonic Acoustic.png"; sourceTree = "<group>"; };
+		38D001E4189F69A100968B24 /* 05 Blues Minor Hexatonic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05 Blues Minor Hexatonic.png"; sourceTree = "<group>"; };
+		38D001E5189F69A100968B24 /* 06 Dominant bebop Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06 Dominant bebop Acoustic.png"; sourceTree = "<group>"; };
+		38D001E6189F69A100968B24 /* 06 Dominant bebop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06 Dominant bebop.png"; sourceTree = "<group>"; };
+		38D001E7189F69A100968B24 /* 07 Aeolian Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07 Aeolian Acoustic.png"; sourceTree = "<group>"; };
+		38D001E8189F69A100968B24 /* 07 Aeolian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07 Aeolian.png"; sourceTree = "<group>"; };
+		38D001E9189F69A100968B24 /* 08 Phrygian Acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08 Phrygian Acoustic.png"; sourceTree = "<group>"; };
+		38D001EA189F69A100968B24 /* 08 Phrygian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08 Phrygian.png"; sourceTree = "<group>"; };
+		38D001EB189F69A100968B24 /* icon 160 x 180  acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 160 x 180  acoustic.png"; sourceTree = "<group>"; };
+		38D001EC189F69A100968B24 /* icon 160 x 180  electric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 160 x 180  electric.png"; sourceTree = "<group>"; };
+		38D001ED189F69A100968B24 /* icon 80 x 90 acoustic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 80 x 90 acoustic.png"; sourceTree = "<group>"; };
+		38D001EE189F69A100968B24 /* icon 80 x 90 electric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon 80 x 90 electric.png"; sourceTree = "<group>"; };
+		38D001EF189F69A100968B24 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		38D001F0189F69A100968B24 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		38D00207189F69AA00968B24 /* PlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayButton.h; sourceTree = "<group>"; };
+		38D00208189F69AA00968B24 /* PlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayButton.m; sourceTree = "<group>"; };
+		38D00209189F69AA00968B24 /* Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scale.h; sourceTree = "<group>"; };
+		38D0020A189F69AA00968B24 /* Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scale.m; sourceTree = "<group>"; };
+		38D0020D189F69B900968B24 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		38D0020E189F69B900968B24 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		38D00210189F6A2B00968B24 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		38D00212189F6D3C00968B24 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		38D00214189F6D5A00968B24 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38D0017B189F68C800968B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D00215189F6D5A00968B24 /* AVFoundation.framework in Frameworks */,
+				38D00213189F6D3C00968B24 /* AudioToolbox.framework in Frameworks */,
+				38D00184189F68C800968B24 /* CoreGraphics.framework in Frameworks */,
+				38D00186189F68C800968B24 /* UIKit.framework in Frameworks */,
+				38D00182189F68C800968B24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D0019F189F68C800968B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D001A4189F68C800968B24 /* XCTest.framework in Frameworks */,
+				38D001A6189F68C800968B24 /* UIKit.framework in Frameworks */,
+				38D001A5189F68C800968B24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38D00175189F68C800968B24 = {
+			isa = PBXGroup;
+			children = (
+				38D00187189F68C800968B24 /* utilityScale */,
+				38D001A9189F68C800968B24 /* utilityScaleTests */,
+				38D00180189F68C800968B24 /* Frameworks */,
+				38D0017F189F68C800968B24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38D0017F189F68C800968B24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38D0017E189F68C800968B24 /* utilityScale.app */,
+				38D001A2189F68C800968B24 /* utilityScaleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38D00180189F68C800968B24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38D00214189F6D5A00968B24 /* AVFoundation.framework */,
+				38D00212189F6D3C00968B24 /* AudioToolbox.framework */,
+				38D00181189F68C800968B24 /* Foundation.framework */,
+				38D00183189F68C800968B24 /* CoreGraphics.framework */,
+				38D00185189F68C800968B24 /* UIKit.framework */,
+				38D001A3189F68C800968B24 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38D00187189F68C800968B24 /* utilityScale */ = {
+			isa = PBXGroup;
+			children = (
+				38D0020D189F69B900968B24 /* AudioPlayer.h */,
+				38D0020E189F69B900968B24 /* AudioPlayer.m */,
+				38D00207189F69AA00968B24 /* PlayButton.h */,
+				38D00208189F69AA00968B24 /* PlayButton.m */,
+				38D00209189F69AA00968B24 /* Scale.h */,
+				38D0020A189F69AA00968B24 /* Scale.m */,
+				38D00190189F68C800968B24 /* AppDelegate.h */,
+				38D00191189F68C800968B24 /* AppDelegate.m */,
+				38D00193189F68C800968B24 /* Main.storyboard */,
+				38D00196189F68C800968B24 /* MainViewController.h */,
+				38D00197189F68C800968B24 /* MainViewController.m */,
+				38D00199189F68C800968B24 /* FlipsideViewController.h */,
+				38D0019A189F68C800968B24 /* FlipsideViewController.m */,
+				38D0019C189F68C800968B24 /* Images.xcassets */,
+				38D00188189F68C800968B24 /* Supporting Files */,
+			);
+			path = utilityScale;
+			sourceTree = "<group>";
+		};
+		38D00188189F68C800968B24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38D001DA189F69A100968B24 /* Images */,
+				38D001B9189F699900968B24 /* Audio Files */,
+				38D00210189F6A2B00968B24 /* Default-Landscape~ipad.png */,
+				38D00189189F68C800968B24 /* utilityScale-Info.plist */,
+				38D0018A189F68C800968B24 /* InfoPlist.strings */,
+				38D0018D189F68C800968B24 /* main.m */,
+				38D0018F189F68C800968B24 /* utilityScale-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38D001A9189F68C800968B24 /* utilityScaleTests */ = {
+			isa = PBXGroup;
+			children = (
+				38D001AF189F68C800968B24 /* utilityScaleTests.m */,
+				38D001AA189F68C800968B24 /* Supporting Files */,
+			);
+			path = utilityScaleTests;
+			sourceTree = "<group>";
+		};
+		38D001AA189F68C800968B24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38D001AB189F68C800968B24 /* utilityScaleTests-Info.plist */,
+				38D001AC189F68C800968B24 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38D001B9189F699900968B24 /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				38D001BA189F699900968B24 /* 01 Major Pentatonic 1st mode acoustic.m4a */,
+				38D001BB189F699900968B24 /* 01 Major Pentatonic 1st mode electric.m4a */,
+				38D001BC189F699900968B24 /* 02 Major Pentatonic 2nd mode acoustic.m4a */,
+				38D001BD189F699900968B24 /* 02 Major Pentatonic 2nd mode electric.m4a */,
+				38D001BE189F699900968B24 /* 03 Mixolydian 5th mode acoustic.m4a */,
+				38D001BF189F699900968B24 /* 03 Mixolydian 5th mode electric.m4a */,
+				38D001C0189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major acoustic.m4a */,
+				38D001C1189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major electric.m4a */,
+				38D001C2189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 acoustic.m4a */,
+				38D001C3189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 electric.m4a */,
+				38D001C4189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian acoustic.m4a */,
+				38D001C5189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian electric.m4a */,
+				38D001C6189F699900968B24 /* 07 Aelian and Phtygian acoustic.m4a */,
+				38D001C7189F699900968B24 /* 07 Aelian and Phtygian electric.m4a */,
+				38D001C8189F699900968B24 /* 08 Phrygian Dominant acoustic.m4a */,
+				38D001C9189F699900968B24 /* 08 Phrygian Dominant electric.m4a */,
+			);
+			path = "Audio Files";
+			sourceTree = "<group>";
+		};
+		38D001DA189F69A100968B24 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				38D001DB189F69A100968B24 /* 01 Major Pentatonic, 1st mode Acoustic.png */,
+				38D001DC189F69A100968B24 /* 01 Major Pentatonic, 1st mode.png */,
+				38D001DD189F69A100968B24 /* 02 Major Pentatonic, 2nd mode Acoustic.png */,
+				38D001DE189F69A100968B24 /* 02 Major Pentatonic, 2nd mode.png */,
+				38D001DF189F69A100968B24 /* 03 Mixolydian Acoustic.png */,
+				38D001E0189F69A100968B24 /* 03 Mixolydian.png */,
+				38D001E1189F69A100968B24 /* 04 Minor Pentatonic, 5th of major Acoustic.png */,
+				38D001E2189F69A100968B24 /* 04 Minor Pentatonic, 5th of major.png */,
+				38D001E3189F69A100968B24 /* 05 Blues Minor Hexatonic Acoustic.png */,
+				38D001E4189F69A100968B24 /* 05 Blues Minor Hexatonic.png */,
+				38D001E5189F69A100968B24 /* 06 Dominant bebop Acoustic.png */,
+				38D001E6189F69A100968B24 /* 06 Dominant bebop.png */,
+				38D001E7189F69A100968B24 /* 07 Aeolian Acoustic.png */,
+				38D001E8189F69A100968B24 /* 07 Aeolian.png */,
+				38D001E9189F69A100968B24 /* 08 Phrygian Acoustic.png */,
+				38D001EA189F69A100968B24 /* 08 Phrygian.png */,
+				38D001EB189F69A100968B24 /* icon 160 x 180  acoustic.png */,
+				38D001EC189F69A100968B24 /* icon 160 x 180  electric.png */,
+				38D001ED189F69A100968B24 /* icon 80 x 90 acoustic.png */,
+				38D001EE189F69A100968B24 /* icon 80 x 90 electric.png */,
+				38D001EF189F69A100968B24 /* pause.png */,
+				38D001F0189F69A100968B24 /* play.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38D0017D189F68C800968B24 /* utilityScale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D001B3189F68C800968B24 /* Build configuration list for PBXNativeTarget "utilityScale" */;
+			buildPhases = (
+				38D0017A189F68C800968B24 /* Sources */,
+				38D0017B189F68C800968B24 /* Frameworks */,
+				38D0017C189F68C800968B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = utilityScale;
+			productName = utilityScale;
+			productReference = 38D0017E189F68C800968B24 /* utilityScale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38D001A1189F68C800968B24 /* utilityScaleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D001B6189F68C800968B24 /* Build configuration list for PBXNativeTarget "utilityScaleTests" */;
+			buildPhases = (
+				38D0019E189F68C800968B24 /* Sources */,
+				38D0019F189F68C800968B24 /* Frameworks */,
+				38D001A0189F68C800968B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38D001A8189F68C800968B24 /* PBXTargetDependency */,
+			);
+			name = utilityScaleTests;
+			productName = utilityScaleTests;
+			productReference = 38D001A2189F68C800968B24 /* utilityScaleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38D00176189F68C800968B24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Lee JaeJung";
+				TargetAttributes = {
+					38D001A1189F68C800968B24 = {
+						TestTargetID = 38D0017D189F68C800968B24;
+					};
+				};
+			};
+			buildConfigurationList = 38D00179189F68C800968B24 /* Build configuration list for PBXProject "utilityScale" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38D00175189F68C800968B24;
+			productRefGroup = 38D0017F189F68C800968B24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38D0017D189F68C800968B24 /* utilityScale */,
+				38D001A1189F68C800968B24 /* utilityScaleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38D0017C189F68C800968B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D00211189F6A2B00968B24 /* Default-Landscape~ipad.png in Resources */,
+				38D001D5189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian electric.m4a in Resources */,
+				38D001F5189F69A100968B24 /* 03 Mixolydian Acoustic.png in Resources */,
+				38D00205189F69A100968B24 /* pause.png in Resources */,
+				38D001FF189F69A100968B24 /* 08 Phrygian Acoustic.png in Resources */,
+				38D00203189F69A100968B24 /* icon 80 x 90 acoustic.png in Resources */,
+				38D001F3189F69A100968B24 /* 02 Major Pentatonic, 2nd mode Acoustic.png in Resources */,
+				38D001D9189F699900968B24 /* 08 Phrygian Dominant electric.m4a in Resources */,
+				38D001FB189F69A100968B24 /* 06 Dominant bebop Acoustic.png in Resources */,
+				38D001FD189F69A100968B24 /* 07 Aeolian Acoustic.png in Resources */,
+				38D001CA189F699900968B24 /* 01 Major Pentatonic 1st mode acoustic.m4a in Resources */,
+				38D001D0189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major acoustic.m4a in Resources */,
+				38D001F4189F69A100968B24 /* 02 Major Pentatonic, 2nd mode.png in Resources */,
+				38D001F1189F69A100968B24 /* 01 Major Pentatonic, 1st mode Acoustic.png in Resources */,
+				38D001D1189F699900968B24 /* 04 Minor Pentatonic 5th mode of Major electric.m4a in Resources */,
+				38D001CB189F699900968B24 /* 01 Major Pentatonic 1st mode electric.m4a in Resources */,
+				38D001D4189F699900968B24 /* 06 Dominant Bebop raisd 7th to Mixolydian acoustic.m4a in Resources */,
+				38D00204189F69A100968B24 /* icon 80 x 90 electric.png in Resources */,
+				38D001D6189F699900968B24 /* 07 Aelian and Phtygian acoustic.m4a in Resources */,
+				38D0019D189F68C800968B24 /* Images.xcassets in Resources */,
+				38D001FC189F69A100968B24 /* 06 Dominant bebop.png in Resources */,
+				38D001FE189F69A100968B24 /* 07 Aeolian.png in Resources */,
+				38D001D8189F699900968B24 /* 08 Phrygian Dominant acoustic.m4a in Resources */,
+				38D001CF189F699900968B24 /* 03 Mixolydian 5th mode electric.m4a in Resources */,
+				38D001F9189F69A100968B24 /* 05 Blues Minor Hexatonic Acoustic.png in Resources */,
+				38D00202189F69A100968B24 /* icon 160 x 180  electric.png in Resources */,
+				38D001CD189F699900968B24 /* 02 Major Pentatonic 2nd mode electric.m4a in Resources */,
+				38D001CC189F699900968B24 /* 02 Major Pentatonic 2nd mode acoustic.m4a in Resources */,
+				38D001F2189F69A100968B24 /* 01 Major Pentatonic, 1st mode.png in Resources */,
+				38D001D2189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 acoustic.m4a in Resources */,
+				38D00200189F69A100968B24 /* 08 Phrygian.png in Resources */,
+				38D001F6189F69A100968B24 /* 03 Mixolydian.png in Resources */,
+				38D001FA189F69A100968B24 /* 05 Blues Minor Hexatonic.png in Resources */,
+				38D001D7189F699900968B24 /* 07 Aelian and Phtygian electric.m4a in Resources */,
+				38D001CE189F699900968B24 /* 03 Mixolydian 5th mode acoustic.m4a in Resources */,
+				38D0018C189F68C800968B24 /* InfoPlist.strings in Resources */,
+				38D001F8189F69A100968B24 /* 04 Minor Pentatonic, 5th of major.png in Resources */,
+				38D001F7189F69A100968B24 /* 04 Minor Pentatonic, 5th of major Acoustic.png in Resources */,
+				38D00206189F69A100968B24 /* play.png in Resources */,
+				38D00195189F68C800968B24 /* Main.storyboard in Resources */,
+				38D001D3189F699900968B24 /* 05 Blues Minor Hexatonic Minor Pentatonic dim 5 electric.m4a in Resources */,
+				38D00201189F69A100968B24 /* icon 160 x 180  acoustic.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D001A0189F68C800968B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D001AE189F68C800968B24 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38D0017A189F68C800968B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D0020C189F69AA00968B24 /* Scale.m in Sources */,
+				38D00192189F68C800968B24 /* AppDelegate.m in Sources */,
+				38D0020F189F69B900968B24 /* AudioPlayer.m in Sources */,
+				38D0020B189F69AA00968B24 /* PlayButton.m in Sources */,
+				38D00198189F68C800968B24 /* MainViewController.m in Sources */,
+				38D0019B189F68C800968B24 /* FlipsideViewController.m in Sources */,
+				38D0018E189F68C800968B24 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38D0019E189F68C800968B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D001B0189F68C800968B24 /* utilityScaleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38D001A8189F68C800968B24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38D0017D189F68C800968B24 /* utilityScale */;
+			targetProxy = 38D001A7189F68C800968B24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38D0018A189F68C800968B24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D0018B189F68C800968B24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38D00193189F68C800968B24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D00194189F68C800968B24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38D001AC189F68C800968B24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D001AD189F68C800968B24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38D001B1189F68C800968B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		38D001B2189F68C800968B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38D001B4189F68C800968B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "utilityScale/utilityScale-Prefix.pch";
+				INFOPLIST_FILE = "utilityScale/utilityScale-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38D001B5189F68C800968B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "utilityScale/utilityScale-Prefix.pch";
+				INFOPLIST_FILE = "utilityScale/utilityScale-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		38D001B7189F68C800968B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/utilityScale.app/utilityScale";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "utilityScale/utilityScale-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "utilityScaleTests/utilityScaleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		38D001B8189F68C800968B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/utilityScale.app/utilityScale";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "utilityScale/utilityScale-Prefix.pch";
+				INFOPLIST_FILE = "utilityScaleTests/utilityScaleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38D00179189F68C800968B24 /* Build configuration list for PBXProject "utilityScale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D001B1189F68C800968B24 /* Debug */,
+				38D001B2189F68C800968B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D001B3189F68C800968B24 /* Build configuration list for PBXNativeTarget "utilityScale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D001B4189F68C800968B24 /* Debug */,
+				38D001B5189F68C800968B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38D001B6189F68C800968B24 /* Build configuration list for PBXNativeTarget "utilityScaleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D001B7189F68C800968B24 /* Debug */,
+				38D001B8189F68C800968B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38D00176189F68C800968B24 /* Project object */;
+}
