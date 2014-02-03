@@ -15,13 +15,22 @@
 		383DB27A18952ABD00BDF393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 383DB27918952ABD00BDF393 /* AppDelegate.m */; };
 		383DB27D18952ABD00BDF393 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383DB27B18952ABD00BDF393 /* Main_iPhone.storyboard */; };
 		383DB28018952ABD00BDF393 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383DB27E18952ABD00BDF393 /* Main_iPad.storyboard */; };
-		383DB28318952ABD00BDF393 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383DB28218952ABD00BDF393 /* ViewController.m */; };
 		383DB28518952ABD00BDF393 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383DB28418952ABD00BDF393 /* Images.xcassets */; };
 		383DB28C18952ABD00BDF393 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383DB28B18952ABD00BDF393 /* XCTest.framework */; };
 		383DB28D18952ABD00BDF393 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383DB26918952ABD00BDF393 /* Foundation.framework */; };
 		383DB28E18952ABD00BDF393 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383DB26D18952ABD00BDF393 /* UIKit.framework */; };
 		383DB29618952ABD00BDF393 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 383DB29418952ABD00BDF393 /* InfoPlist.strings */; };
 		383DB29818952ABD00BDF393 /* FlickerPhotoMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383DB29718952ABD00BDF393 /* FlickerPhotoMapTests.m */; };
+		383DB2A218952C5F00BDF393 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383DB2A118952C5F00BDF393 /* MapKit.framework */; };
+		383DB2AA18952D0200BDF393 /* BluePin.png in Resources */ = {isa = PBXBuildFile; fileRef = 383DB2A418952D0200BDF393 /* BluePin.png */; };
+		383DB2AB18952D0200BDF393 /* GreenPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 383DB2A518952D0200BDF393 /* GreenPin.png */; };
+		383DB2AC18952D0200BDF393 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 383DB2A618952D0200BDF393 /* Icon.png */; };
+		383DB2AD18952D0200BDF393 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 383DB2A718952D0200BDF393 /* Icon@2x.png */; };
+		383DB2AE18952D0200BDF393 /* RedPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 383DB2A818952D0200BDF393 /* RedPin.png */; };
+		383DB2AF18952D0200BDF393 /* YellowPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 383DB2A918952D0200BDF393 /* YellowPin.png */; };
+		383DB2B218952DD700BDF393 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383DB2B118952DD700BDF393 /* MapViewController.m */; };
+		383DB2B51895338F00BDF393 /* PhotoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 383DB2B41895338F00BDF393 /* PhotoAnnotation.m */; };
+		38D00170189F1A3400968B24 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D0016F189F1A3400968B24 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +56,25 @@
 		383DB27918952ABD00BDF393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		383DB27C18952ABD00BDF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		383DB27F18952ABD00BDF393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		383DB28118952ABD00BDF393 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		383DB28218952ABD00BDF393 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		383DB28418952ABD00BDF393 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		383DB28A18952ABD00BDF393 /* FlickerPhotoMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerPhotoMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		383DB28B18952ABD00BDF393 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		383DB29318952ABD00BDF393 /* FlickerPhotoMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickerPhotoMapTests-Info.plist"; sourceTree = "<group>"; };
 		383DB29518952ABD00BDF393 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		383DB29718952ABD00BDF393 /* FlickerPhotoMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickerPhotoMapTests.m; sourceTree = "<group>"; };
+		383DB2A118952C5F00BDF393 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		383DB2A418952D0200BDF393 /* BluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BluePin.png; sourceTree = "<group>"; };
+		383DB2A518952D0200BDF393 /* GreenPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenPin.png; sourceTree = "<group>"; };
+		383DB2A618952D0200BDF393 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		383DB2A718952D0200BDF393 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		383DB2A818952D0200BDF393 /* RedPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedPin.png; sourceTree = "<group>"; };
+		383DB2A918952D0200BDF393 /* YellowPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowPin.png; sourceTree = "<group>"; };
+		383DB2B018952DD700BDF393 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
+		383DB2B118952DD700BDF393 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		383DB2B31895338F00BDF393 /* PhotoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAnnotation.h; sourceTree = "<group>"; };
+		383DB2B41895338F00BDF393 /* PhotoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAnnotation.m; sourceTree = "<group>"; };
+		38D0016E189F1A3400968B24 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		38D0016F189F1A3400968B24 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383DB2A218952C5F00BDF393 /* MapKit.framework in Frameworks */,
 				383DB26C18952ABD00BDF393 /* CoreGraphics.framework in Frameworks */,
 				383DB26E18952ABD00BDF393 /* UIKit.framework in Frameworks */,
 				383DB26A18952ABD00BDF393 /* Foundation.framework in Frameworks */,
@@ -103,6 +124,7 @@
 		383DB26818952ABD00BDF393 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				383DB2A118952C5F00BDF393 /* MapKit.framework */,
 				383DB26918952ABD00BDF393 /* Foundation.framework */,
 				383DB26B18952ABD00BDF393 /* CoreGraphics.framework */,
 				383DB26D18952ABD00BDF393 /* UIKit.framework */,
@@ -114,12 +136,16 @@
 		383DB26F18952ABD00BDF393 /* FlickerPhotoMap */ = {
 			isa = PBXGroup;
 			children = (
+				38D0016E189F1A3400968B24 /* PhotoViewController.h */,
+				38D0016F189F1A3400968B24 /* PhotoViewController.m */,
+				383DB2B018952DD700BDF393 /* MapViewController.h */,
+				383DB2B118952DD700BDF393 /* MapViewController.m */,
+				383DB2B31895338F00BDF393 /* PhotoAnnotation.h */,
+				383DB2B41895338F00BDF393 /* PhotoAnnotation.m */,
 				383DB27818952ABD00BDF393 /* AppDelegate.h */,
 				383DB27918952ABD00BDF393 /* AppDelegate.m */,
 				383DB27B18952ABD00BDF393 /* Main_iPhone.storyboard */,
 				383DB27E18952ABD00BDF393 /* Main_iPad.storyboard */,
-				383DB28118952ABD00BDF393 /* ViewController.h */,
-				383DB28218952ABD00BDF393 /* ViewController.m */,
 				383DB28418952ABD00BDF393 /* Images.xcassets */,
 				383DB27018952ABD00BDF393 /* Supporting Files */,
 			);
@@ -129,6 +155,7 @@
 		383DB27018952ABD00BDF393 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				383DB2A318952D0200BDF393 /* Images */,
 				383DB27118952ABD00BDF393 /* FlickerPhotoMap-Info.plist */,
 				383DB27218952ABD00BDF393 /* InfoPlist.strings */,
 				383DB27518952ABD00BDF393 /* main.m */,
@@ -153,6 +180,19 @@
 				383DB29418952ABD00BDF393 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		383DB2A318952D0200BDF393 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				383DB2A418952D0200BDF393 /* BluePin.png */,
+				383DB2A518952D0200BDF393 /* GreenPin.png */,
+				383DB2A618952D0200BDF393 /* Icon.png */,
+				383DB2A718952D0200BDF393 /* Icon@2x.png */,
+				383DB2A818952D0200BDF393 /* RedPin.png */,
+				383DB2A918952D0200BDF393 /* YellowPin.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +272,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				383DB28018952ABD00BDF393 /* Main_iPad.storyboard in Resources */,
+				383DB2AD18952D0200BDF393 /* Icon@2x.png in Resources */,
 				383DB28518952ABD00BDF393 /* Images.xcassets in Resources */,
 				383DB27D18952ABD00BDF393 /* Main_iPhone.storyboard in Resources */,
 				383DB27418952ABD00BDF393 /* InfoPlist.strings in Resources */,
+				383DB2AA18952D0200BDF393 /* BluePin.png in Resources */,
+				383DB2AE18952D0200BDF393 /* RedPin.png in Resources */,
+				383DB2AC18952D0200BDF393 /* Icon.png in Resources */,
+				383DB2AB18952D0200BDF393 /* GreenPin.png in Resources */,
+				383DB2AF18952D0200BDF393 /* YellowPin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383DB28318952ABD00BDF393 /* ViewController.m in Sources */,
+				383DB2B218952DD700BDF393 /* MapViewController.m in Sources */,
+				383DB2B51895338F00BDF393 /* PhotoAnnotation.m in Sources */,
 				383DB27A18952ABD00BDF393 /* AppDelegate.m in Sources */,
 				383DB27618952ABD00BDF393 /* main.m in Sources */,
+				38D00170189F1A3400968B24 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +522,7 @@
 				383DB29D18952ABD00BDF393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		383DB29E18952ABD00BDF393 /* Build configuration list for PBXNativeTarget "FlickerPhotoMapTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +531,7 @@
 				383DB2A018952ABD00BDF393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
