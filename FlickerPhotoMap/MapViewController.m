@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "PhotoAnnotation.h"
 #import "PhotoViewController.h"
+#import "PinSelectionViewController.h"
 
 NSString *const FlickrAPIKey = @"562ce9dc2086e773508d66bed9a7c068";
 NSString *const FlickrUserId = @"70227599@N07";
@@ -185,8 +186,28 @@ NSString *const FlickrUserId = @"70227599@N07";
         PhotoAnnotation *selectedAnnotation = (PhotoAnnotation *)sender;    
         photoVC.photoAnnotation = selectedAnnotation;
     }
+    
+    if ([segue.identifier isEqualToString:@"ShowPinChoicesSegue"]) {
+        
+        PinSelectionViewController *pinVC = [segue destinationViewController];
+        
+        PhotoAnnotation *selectedAnnotation = (PhotoAnnotation *)sender;    
+        pinVC.currentPinType = selectedAnnotation.pinType;
+        pinVC.delegate = self;
+    }
+    
+    
 }
 
+
+-(void)userDidSelectPinType:(AnnotationPinType)aPinType
+{
+    PhotoAnnotation *selectedAnnotation = (PhotoAnnotation *)[self.mapView.selectedAnnotations objectAtIndex:0];
+    selectedAnnotation.pinType = aPinType;
+    [self.mapView removeAnnotation:selectedAnnotation];
+    [self.mapView addAnnotation:selectedAnnotation];
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+}
 
 
 
@@ -198,12 +219,14 @@ NSString *const FlickrUserId = @"70227599@N07";
     if ([annotation isKindOfClass:[PhotoAnnotation class]]) {
         // Use our pin image for annotation, with a disclosure button callout accessory
 
-        MKAnnotationView *annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"PhotoAnnotation"];
+        MKAnnotationView *annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:
+                                                                ((PhotoAnnotation*)annotation).annotationViewImageName ];
         
         if (annotationView == nil)
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"PhotoAnnotation"];
+            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:
+                              ((PhotoAnnotation*)annotation).annotationViewImageName];
         
-        annotationView.image = [UIImage imageNamed:@"BluePin.png"];
+        annotationView.image = [UIImage imageNamed:((PhotoAnnotation*)annotation).annotationViewImageName];
         annotationView.canShowCallout = YES;
         
         UIButton *disclosureButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -222,7 +245,11 @@ NSString *const FlickrUserId = @"70227599@N07";
     
     PhotoAnnotation *photoAnnotation = (PhotoAnnotation *)view.annotation;
  
-    [self performSegueWithIdentifier:@"ShowFullSizeImageSegue" sender:photoAnnotation];
+    if (control.tag == 0) {
+        [self performSegueWithIdentifier:@"ShowFullSizeImageSegue" sender:photoAnnotation];
+    } else {
+        [self onLeftCalloutAccessoryViewTouched:control];
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
@@ -234,5 +261,23 @@ NSString *const FlickrUserId = @"70227599@N07";
     PhotoAnnotation *photoAnnotation = (PhotoAnnotation *)view.annotation;
     if (!photoAnnotation.subtitle)
         [photoAnnotation updateSubtitle];
+
+    if (!view.leftCalloutAccessoryView) {
+        UIButton *leftViewButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 48.0, 32.0)];
+        [leftViewButton setBackgroundImage:photoAnnotation.thumbnail forState:UIControlStateNormal];
+        [leftViewButton addTarget:self action:@selector(onLeftCalloutAccessoryViewTouched:) forControlEvents:UIControlEventTouchUpInside];
+        leftViewButton.tag = 1;
+        view.leftCalloutAccessoryView = leftViewButton;
+    }
+
 }
+
+
+- (void)onLeftCalloutAccessoryViewTouched:(id)sender
+{
+    PhotoAnnotation *selectedAnnotation = (PhotoAnnotation *)[self.mapView.selectedAnnotations objectAtIndex:0];
+    [self performSegueWithIdentifier:@"ShowPinChoicesSegue" sender:selectedAnnotation];
+}
+
+
 @end

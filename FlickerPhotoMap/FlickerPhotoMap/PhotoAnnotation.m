@@ -8,12 +8,14 @@
 
 #import "PhotoAnnotation.h"
 #import <CoreLocation/CoreLocation.h>
+#import "PinSelectionDelegateProtocol.h"
 
 @implementation PhotoAnnotation
 
 @synthesize title, subtitle, coordinate;
 @synthesize image, thumbnail;
-@synthesize imageURL, thumbnailURL; 
+@synthesize imageURL, thumbnailURL;
+@synthesize pinType;
 
 - (id)initWithImageURL:(NSURL *)anImageURL thumbnailURL:(NSURL *)aThumbnailURL title:(NSString *)aTitle coordinate:(CLLocationCoordinate2D)aCoordinate
 {
@@ -55,6 +57,27 @@
     }
     return thumbnail;
 }
+
+- (NSString *)annotationViewImageName
+{
+    switch (self.pinType) {
+        case 0:
+            return @"BluePin.png";
+            break;
+        case 1:
+            return @"RedPin.png";
+            break;
+        case 2:
+            return @"GreenPin.png";
+            break;
+        case 3:
+            return @"YellowPin.png";
+            break;
+        default:
+            break;
+    }
+}
+
 
 #pragma mark - Reverse geocode subtitle
 #pragma mark -

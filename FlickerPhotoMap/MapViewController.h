@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "PinSelectionDelegateProtocol.h"
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController<MKMapViewDelegate, PinSelectionDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 

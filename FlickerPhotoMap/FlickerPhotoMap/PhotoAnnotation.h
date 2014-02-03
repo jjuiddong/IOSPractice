@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "PinSelectionDelegateProtocol.h"
 
 @interface PhotoAnnotation : NSObject <MKAnnotation>
 
@@ -21,6 +22,8 @@
 @property (nonatomic, strong)    UIImage *thumbnail;
 @property (nonatomic, strong)    NSURL *imageURL;
 @property (nonatomic, strong)    NSURL *thumbnailURL;
+@property (nonatomic, assign)    AnnotationPinType pinType;
+@property (nonatomic, readonly)  NSString *annotationViewImageName;
 
 - (id)initWithImageURL:(NSURL *)anImageURL thumbnailURL:(NSURL *)aThumbnailURL title:(NSString *)aTitle coordinate:(CLLocationCoordinate2D)aCoordinate;
 - (void)updateSubtitle;
