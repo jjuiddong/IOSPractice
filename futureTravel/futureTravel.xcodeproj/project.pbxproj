@@ -576,6 +576,7 @@
 				388009A318A1225700DB79B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388009A418A1225700DB79B2 /* Build configuration list for PBXNativeTarget "futureTravelTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +585,7 @@
 				388009A618A1225700DB79B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

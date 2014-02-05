@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DataViewControllerDelegate;
+
+
 @interface DataViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
+@property (weak, nonatomic) IBOutlet UIImageView *ivPageImage;
+
+@property (weak, nonatomic) id<DataViewControllerDelegate> delegate;
+
+@end
+
+
+@protocol DataViewControllerDelegate <NSObject>
+
+@required
+-(void)dataViewControllerSelectedDestination:(NSUInteger)destinationNumber;
 
 @end

@@ -13,11 +13,13 @@
                         <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="502-Ir-ELC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.76862745098039209" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
             </objects>
@@ -32,35 +34,38 @@
                         <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
                     </layoutGuides>
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZwX-cT-FIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-Le-7mQ">
-                                <rect key="frame" x="20" y="20" width="728" height="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="17"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPh-8o-oUW">
-                                <rect key="frame" x="13" y="33" width="741" height="959"/>
+                                <rect key="frame" x="0.0" y="20" width="941" height="677"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.8784313725490196" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="cF2-Le-7mQ" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" constant="20" symbolic="YES" id="PnF-O8-Bso"/>
-                            <constraint firstAttribute="trailing" secondItem="cF2-Le-7mQ" secondAttribute="trailing" constant="20" symbolic="YES" id="cCk-mG-gz5"/>
-                            <constraint firstItem="cF2-Le-7mQ" firstAttribute="top" secondItem="ZwX-cT-FIQ" secondAttribute="top" constant="20" symbolic="YES" id="zem-Jm-uYh"/>
+                            <constraint firstItem="cF2-Le-7mQ" firstAttribute="leading" secondItem="ZwX-cT-FIQ" secondAttribute="leading" id="PnF-O8-Bso"/>
+                            <constraint firstAttribute="trailing" secondItem="cF2-Le-7mQ" secondAttribute="trailing" id="cCk-mG-gz5"/>
+                            <constraint firstItem="cF2-Le-7mQ" firstAttribute="top" secondItem="ZwX-cT-FIQ" secondAttribute="top" id="zem-Jm-uYh"/>
                         </constraints>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="dataLabel" destination="cF2-Le-7mQ" id="3EH-BK-JV6"/>
+                        <outlet property="ivPageImage" destination="yPh-8o-oUW" id="rha-Ij-abP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="-243"/>
+            <point key="canvasLocation" x="1128" y="-243"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

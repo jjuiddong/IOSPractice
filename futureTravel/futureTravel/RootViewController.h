@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataViewController.h"
 
-@interface RootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface RootViewController : UIViewController <UIPageViewControllerDelegate, DataViewControllerDelegate> {
+    
+}
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 

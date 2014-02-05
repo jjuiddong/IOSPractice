@@ -11,6 +11,7 @@
 @class DataViewController;
 
 @interface ModelController : NSObject <UIPageViewControllerDataSource>
+@property (nonatomic, assign) NSUInteger destinationNumber; // number [1-4] for selected destination
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
 - (NSUInteger)indexOfViewController:(DataViewController *)viewController;
