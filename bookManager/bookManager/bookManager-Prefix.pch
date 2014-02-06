@@ -5,6 +5,8 @@
 //
 
 #import <Availability.h>
+//#import "MagicalRecord.h"
+#import "CoreData+MagicalRecord.h"
 
 #ifndef __IPHONE_5_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."
@@ -14,3 +16,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+//#define NS_BLOCKS_AVAILABLE
+
