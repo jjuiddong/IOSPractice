@@ -7,12 +7,32 @@
 //
 
 #import "AddBookViewController.h"
+#import "DBBook.h"
+#import "DBCategory.h"
+#import "DBAuthor.h"
+
 
 @interface AddBookViewController ()
+{
+    NSMutableDictionary *_bookDict;
+    
+}
+
+@property (weak, nonatomic) IBOutlet UITextField *_titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *_yearTextField;
+@property (weak, nonatomic) IBOutlet UITextView *_descriptionTextView;
 
 @end
 
+
 @implementation AddBookViewController
+
+@synthesize delegate;
+@synthesize _titleTextField;
+@synthesize _yearTextField;
+@synthesize _descriptionTextView;
+
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,81 +60,101 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
+#pragma mark - Text field delegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if (textField.text.length == 0) {
+        textField.text = @"";
+    }
+    if (_bookDict == nil) {
+        _bookDict = [[NSMutableDictionary alloc] init];
+    }
     
-    // Configure the cell...
-    
-    return cell;
+    if (textField == self._titleTextField) {
+        [_bookDict setObject:textField.text forKey:@"title"];
+    }
+    if (textField == self._yearTextField) {
+        [_bookDict setObject:textField.text forKey:@"year"];
+    }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+
+#pragma mark - Text view delegate
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    if (textView.text.length == 0) {
+        textView.text = @"";
+    }
+    if (_bookDict == nil) {
+        _bookDict = [[NSMutableDictionary alloc] init];
+    }
+    if (textView == self._descriptionTextView) {
+        [_bookDict setObject:textView.text forKey:@"bookDescription"];
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
+- (BOOL)textViewShouldReturn:(UITextView *)textView {
+    [textView resignFirstResponder];
     return YES;
 }
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"SelectCategory"]) {
+        [(SelectionViewController *)[segue destinationViewController] setObjects:[DBCategory allCategories]];
+        [(SelectionViewController *)[segue destinationViewController] setDelegate:self];
+    }
+    if ([[segue identifier] isEqualToString:@"SelectAuthor"]) {
+        [(SelectionViewController *)[segue destinationViewController] setObjects:[DBAuthor allAuthors]];
+        [(SelectionViewController *)[segue destinationViewController] setDelegate:self];
+    }
 }
 
- */
 
+#pragma mark - SelectionVCDelegate
+
+- (void)selectionVC:(SelectionViewController *)aVC didSelectObject:(id)anObject {
+    if ([anObject isKindOfClass:[DBCategory class]]) {
+        [_bookDict setObject:((DBCategory *)anObject).categoryId forKey:@"categoryId"];
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+        cell.textLabel.text = ((DBCategory *)anObject).categoryName;
+     }
+    if ([anObject isKindOfClass:[DBAuthor class]]) {
+        [_bookDict setObject:((DBAuthor *)anObject).authorId forKey:@"authorId"];
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2]];
+        cell.textLabel.text = ((DBAuthor *)anObject).fullName;
+
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)cancelPressed:(id)sender {
+//    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (IBAction)savePressed:(id)sender {
+    
+    [self._titleTextField resignFirstResponder];
+    [self._yearTextField resignFirstResponder];
+    [self._descriptionTextView resignFirstResponder];
+    
+    // Create entities
+    if (_bookDict != nil) {
+        DBBook *newBook = [DBBook createEntityWithDictionary:_bookDict];
+        if ([self.delegate respondsToSelector:@selector(addBookVC:didCreateObject:)]) {
+            [self.delegate addBookVC:self didCreateObject:newBook];
+        }
+    }
+//    [self dismissModalViewControllerAnimated:YES];
+}
 @end
+
+

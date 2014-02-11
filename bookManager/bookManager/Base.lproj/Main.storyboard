@@ -314,6 +314,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Mdf-xk-t4P" id="4ao-XV-fxI"/>
+                                                    </connections>
                                                 </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1x5-uw-zbq">
                                                     <rect key="frame" x="57" y="0.0" width="1" height="50"/>
@@ -340,6 +343,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Mdf-xk-t4P" id="XLB-Us-Dz7"/>
+                                                    </connections>
                                                 </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrf-du-yx1">
                                                     <rect key="frame" x="57" y="0.0" width="1" height="50"/>
@@ -411,9 +417,11 @@
                                                     <rect key="frame" x="20" y="5" width="280" height="89"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Mdf-xk-t4P" id="y7v-rP-5XC"/>
+                                                    </connections>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -427,9 +435,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Book" id="Wpt-lZ-Xpg">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wTv-bC-JDJ"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="JQ5-c1-IUH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wTv-bC-JDJ">
+                            <connections>
+                                <action selector="cancelPressed:" destination="Mdf-xk-t4P" id="wJi-iA-Aig"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="JQ5-c1-IUH">
+                            <connections>
+                                <action selector="savePressed:" destination="Mdf-xk-t4P" id="EgC-DX-dxf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="_descriptionTextView" destination="11c-ZF-5sK" id="NXs-yt-Grj"/>
+                        <outlet property="_titleTextField" destination="NCi-DG-53g" id="W4S-9P-xKa"/>
+                        <outlet property="_yearTextField" destination="xVW-xQ-aSy" id="Dpq-fL-maL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDI-Fa-LnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -557,10 +578,10 @@
             </objects>
             <point key="canvasLocation" x="911" y="763"/>
         </scene>
-        <!--View Controller - Books-->
+        <!--Books View Controller - Books-->
         <scene sceneID="K00-ny-ZVb">
             <objects>
-                <viewController id="wcR-Qh-uXm" sceneMemberID="viewController">
+                <viewController id="wcR-Qh-uXm" customClass="BooksViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PJR-Ns-YVi"/>
                         <viewControllerLayoutGuide type="bottom" id="Pay-CZ-pHK"/>
@@ -587,7 +608,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="fbk-Qy-KIe">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="fbk-Qy-KIe" customClass="CustomCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbk-Qy-KIe" id="K9P-FY-w8f">
@@ -622,6 +643,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="detailLabel1" destination="5fR-80-sDb" id="hVQ-01-L5l"/>
+                                            <outlet property="detailLabel2" destination="r0M-mK-NwW" id="FLz-9z-pgI"/>
+                                            <outlet property="leftImageView" destination="9n2-pc-V6d" id="INC-9D-UjC"/>
+                                            <outlet property="mainLabel" destination="HKW-BC-U8r" id="Ux7-bm-0rp"/>
                                             <segue destination="Ah7-4n-0Wa" kind="push" identifier="ShowBookDetails" id="X03-eq-9ra"/>
                                         </connections>
                                     </tableViewCell>
@@ -665,6 +690,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wcR-Qh-uXm" id="kc1-Ce-DOV"/>
+                                    <outlet property="delegate" destination="wcR-Qh-uXm" id="Z5C-WO-BrH"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -681,6 +710,10 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="_countLabel" destination="Ocn-qY-DNm" id="VpE-xM-4dD"/>
+                        <outlet property="_tableView" destination="oxA-OF-aUB" id="ftw-kV-VXP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2m-gL-6SU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

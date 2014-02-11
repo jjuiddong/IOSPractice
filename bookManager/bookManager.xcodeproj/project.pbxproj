@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38058AA718AA81E8004C9264 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38058AA618AA81E8004C9264 /* BooksViewController.m */; };
 		3811B58818A91AAA0018A61B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811B58718A91AAA0018A61B /* CustomCell.m */; };
 		3811B58B18A91F940018A61B /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811B58A18A91F940018A61B /* SelectionViewController.m */; };
 		3811B58E18A925CD0018A61B /* AddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811B58D18A925CD0018A61B /* AddBookViewController.m */; };
@@ -92,6 +93,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38058AA518AA81E8004C9264 /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksViewController.h; sourceTree = "<group>"; };
+		38058AA618AA81E8004C9264 /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksViewController.m; sourceTree = "<group>"; };
 		3811B58618A91AAA0018A61B /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		3811B58718A91AAA0018A61B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		3811B58918A91F940018A61B /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				38D1370418A35B8800106520 /* Main.storyboard */,
 				3811B58C18A925CD0018A61B /* AddBookViewController.h */,
 				3811B58D18A925CD0018A61B /* AddBookViewController.m */,
+				38058AA518AA81E8004C9264 /* BooksViewController.h */,
+				38058AA618AA81E8004C9264 /* BooksViewController.m */,
 				3811B58918A91F940018A61B /* SelectionViewController.h */,
 				3811B58A18A91F940018A61B /* SelectionViewController.m */,
 				3811B58618A91AAA0018A61B /* CustomCell.h */,
@@ -614,6 +619,7 @@
 				38D1380718A361E100106520 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				3811B58E18A925CD0018A61B /* AddBookViewController.m in Sources */,
 				38D137F818A361E100106520 /* NSManagedObject+MagicalFinders.m in Sources */,
+				38058AA718AA81E8004C9264 /* BooksViewController.m in Sources */,
 				38D137F318A361E100106520 /* NSObject+MagicalDataImport.m in Sources */,
 				38D137F518A361E100106520 /* NSString+MagicalDataImport.m in Sources */,
 				38D1381218A36D1B00106520 /* DBBook.m in Sources */,
