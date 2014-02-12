@@ -11,6 +11,7 @@
 		3811B58818A91AAA0018A61B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811B58718A91AAA0018A61B /* CustomCell.m */; };
 		3811B58B18A91F940018A61B /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811B58A18A91F940018A61B /* SelectionViewController.m */; };
 		3811B58E18A925CD0018A61B /* AddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3811B58D18A925CD0018A61B /* AddBookViewController.m */; };
+		3814120318AB96470047C3B2 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3814120218AB96470047C3B2 /* CategoriesViewController.m */; };
 		38D136F318A35B8800106520 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D136F218A35B8800106520 /* Foundation.framework */; };
 		38D136F518A35B8800106520 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D136F418A35B8800106520 /* CoreGraphics.framework */; };
 		38D136F718A35B8800106520 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D136F618A35B8800106520 /* UIKit.framework */; };
@@ -101,6 +102,8 @@
 		3811B58A18A91F940018A61B /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		3811B58C18A925CD0018A61B /* AddBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBookViewController.h; sourceTree = "<group>"; };
 		3811B58D18A925CD0018A61B /* AddBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBookViewController.m; sourceTree = "<group>"; };
+		3814120118AB96470047C3B2 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		3814120218AB96470047C3B2 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		38D136EF18A35B8800106520 /* bookManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D136F218A35B8800106520 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38D136F418A35B8800106520 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -278,6 +281,8 @@
 				3811B58D18A925CD0018A61B /* AddBookViewController.m */,
 				38058AA518AA81E8004C9264 /* BooksViewController.h */,
 				38058AA618AA81E8004C9264 /* BooksViewController.m */,
+				3814120118AB96470047C3B2 /* CategoriesViewController.h */,
+				3814120218AB96470047C3B2 /* CategoriesViewController.m */,
 				3811B58918A91F940018A61B /* SelectionViewController.h */,
 				3811B58A18A91F940018A61B /* SelectionViewController.m */,
 				3811B58618A91AAA0018A61B /* CustomCell.h */,
@@ -615,6 +620,7 @@
 				38D137FF18A361E100106520 /* NSManagedObjectModel+MagicalRecord.m in Sources */,
 				38D1370918A35B8800106520 /* MasterViewController.m in Sources */,
 				38D1380018A361E100106520 /* NSPersistentStore+MagicalRecord.m in Sources */,
+				3814120318AB96470047C3B2 /* CategoriesViewController.m in Sources */,
 				38D1380418A361E100106520 /* MagicalRecord+iCloud.m in Sources */,
 				38D1380718A361E100106520 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				3811B58E18A925CD0018A61B /* AddBookViewController.m in Sources */,
