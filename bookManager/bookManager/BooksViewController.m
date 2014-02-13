@@ -132,6 +132,8 @@
     if ([[segue identifier] isEqualToString:@"AddNewBook"]) {
         UINavigationController *navigationVC = (UINavigationController *)[segue destinationViewController]; 
         AddBookViewController *addBookVC = (AddBookViewController *)navigationVC.topViewController;
+        addBookVC.category = self.category;
+        addBookVC.author = self.author;
         [addBookVC setDelegate:self];
     }
 }
@@ -140,8 +142,11 @@
 #pragma mark - AddBookVCDelegate
 
 - (void)addBookVC:(AddBookViewController *)aVC didCreateObject:(id)anObject {
-    if ((self.category != nil && ((DBBook *)anObject).category != self.category) ||
-        (self.author != nil && ((DBBook *)anObject).author != self.author)) {
+    if (
+        (self.category != nil && (((DBBook *)anObject).category != self.category)) ||
+        (self.author != nil && (((DBBook *)anObject).author != self.author))
+        )
+    {
         return;
     }
     [_books insertObject:anObject atIndex:0];
@@ -155,12 +160,14 @@
     if (self._tableView.editing)
     {
         self._tableView.editing = NO;
-        sender.titleLabel.text = @"Edit";
+//        sender.titleLabel.text = @"Edit";
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
     }
     else
     {
         self._tableView.editing = YES;
-        sender.titleLabel.text = @"Done";
+//        sender.titleLabel.text = @"Done";
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
     }
 }
 

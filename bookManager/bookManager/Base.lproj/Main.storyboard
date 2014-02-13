@@ -286,7 +286,6 @@
                         <outlet property="_bookImage" destination="LC7-pS-30w" id="6BH-qk-QGA"/>
                         <outlet property="_categoryLabel" destination="Kpa-zE-SyJ" id="cqA-Ph-ie7"/>
                         <outlet property="_descriptionTextView" destination="SHr-VU-IOx" id="A3z-H3-OsB"/>
-                        <outlet property="_descriptionView" destination="SHr-VU-IOx" id="c4L-Zd-hBS"/>
                         <outlet property="_titleLabel" destination="flO-jT-dib" id="6hD-Xv-G2o"/>
                         <outlet property="_yearLabel" destination="RH0-95-WwR" id="aHO-JV-eFU"/>
                     </connections>
@@ -504,10 +503,10 @@
             </objects>
             <point key="canvasLocation" x="2989" y="787"/>
         </scene>
-        <!--View Controller - Authors-->
+        <!--Authors View Controller - Authors-->
         <scene sceneID="Gr7-iV-eBs">
             <objects>
-                <viewController id="acl-HF-2qh" sceneMemberID="viewController">
+                <viewController id="acl-HF-2qh" customClass="AuthorsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Av-tM-Ueg"/>
                         <viewControllerLayoutGuide type="bottom" id="vFM-WQ-8TX"/>
@@ -517,11 +516,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N9s-Yb-W9w">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="19" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="8c0-YX-EHL">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="8c0-YX-EHL" customClass="CustomCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8c0-YX-EHL" id="CgQ-1E-H1x">
@@ -542,6 +541,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel1" destination="8Rj-Yq-9Pq" id="mzd-hX-fKw"/>
+                                            <outlet property="mainLabel" destination="pwP-qt-PmA" id="wSd-zg-TuW"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddCell" textLabel="8FU-XQ-Ac0" style="IBUITableViewCellStyleDefault" id="EPz-19-aa1">
                                         <rect key="frame" x="0.0" y="136" width="320" height="50"/>
@@ -563,6 +566,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="acl-HF-2qh" id="nfl-8o-UVB"/>
+                                    <outlet property="delegate" destination="acl-HF-2qh" id="SgD-E1-kDD"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -576,11 +583,15 @@
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editPressed:" destination="acl-HF-2qh" eventType="touchUpInside" id="FMG-Q1-grY"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Ah7-4n-0Wa" kind="push" identifier="ShowAuthorBookDetail" id="uMM-cm-FXV"/>
+                        <outlet property="_tableView" destination="N9s-Yb-W9w" id="bhH-FJ-lH6"/>
+                        <segue destination="Ah7-4n-0Wa" kind="push" identifier="ShowAuthorBookDetails" id="uMM-cm-FXV"/>
                         <segue destination="wcR-Qh-uXm" kind="push" identifier="ShowAuthorBooks" id="st6-8h-zIt"/>
                     </connections>
                 </viewController>
@@ -605,7 +616,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="bxj-GO-grg">
-                                    <rect key="frame" x="0.0" y="347" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="260" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="book count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocn-qY-DNm">
@@ -660,25 +671,8 @@
                                             <segue destination="Ah7-4n-0Wa" kind="push" identifier="ShowBookDetails" id="X03-eq-9ra"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllCell" textLabel="AO7-JV-Dn7" style="IBUITableViewCellStyleDefault" id="VS3-hP-cg6">
-                                        <rect key="frame" x="0.0" y="173" width="320" height="87"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VS3-hP-cg6" id="uag-L9-9oS">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="86"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="All books" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AO7-JV-Dn7">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="86"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddCell" textLabel="QUa-nw-JT3" style="IBUITableViewCellStyleDefault" id="9FV-f5-Dmi">
-                                        <rect key="frame" x="0.0" y="260" width="320" height="87"/>
+                                        <rect key="frame" x="0.0" y="173" width="320" height="87"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9FV-f5-Dmi" id="u1K-zr-ee2">
                                             <rect key="frame" x="0.0" y="0.0" width="253" height="86"/>
@@ -760,8 +754,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="TgV-nQ-Qd8"/>
-        <segue reference="X03-eq-9ra"/>
+        <segue reference="st6-8h-zIt"/>
+        <segue reference="uMM-cm-FXV"/>
         <segue reference="FuJ-yp-UYX"/>
     </inferredMetricsTieBreakers>
 </document>

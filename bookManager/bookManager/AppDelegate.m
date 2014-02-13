@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DBBook.h"
+#import "DBCategory.h"
+#import "DBAuthor.h"
 
 @implementation AppDelegate
 
@@ -14,7 +17,22 @@
 {
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
     
+    // Temporary data
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"bookdata" ofType:@"plist"];
+    NSDictionary *dataDict = [[NSDictionary alloc] initWithContentsOfFile:path];
     
+    if ([DBBook allBooks].count == 0) {
+        for (NSDictionary *dc in [dataDict objectForKey:@"categories"]) {
+            [DBCategory createEntityWithDictionary:dc];
+        }
+        for (NSDictionary *dc in [dataDict objectForKey:@"authors"]) {
+            [DBAuthor createEntityWithDictionary:dc];
+        }
+        for (NSDictionary *dc in [dataDict objectForKey:@"books"]) {
+            [DBBook createEntityWithDictionary:dc];
+        }
+    }
+
     return YES;
 }
 							

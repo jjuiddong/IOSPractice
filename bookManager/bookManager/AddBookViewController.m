@@ -32,6 +32,8 @@
 @synthesize _yearTextField;
 @synthesize _descriptionTextView;
 
+@synthesize category;
+@synthesize author;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -136,7 +138,7 @@
 }
 
 - (IBAction)cancelPressed:(id)sender {
-//    [self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -148,12 +150,18 @@
     
     // Create entities
     if (_bookDict != nil) {
-        DBBook *newBook = [DBBook createEntityWithDictionary:_bookDict];
+        DBBook *newBook = [DBBook createEntityWithDictionary:_bookDict];        
         if ([self.delegate respondsToSelector:@selector(addBookVC:didCreateObject:)]) {
+            
+            if (self.author != nil)
+                newBook.authorId = self.author.authorId;
+            if (self.category != nil)
+                newBook.categoryId = self.category.categoryId;
+            
             [self.delegate addBookVC:self didCreateObject:newBook];
         }
     }
-//    [self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end
 

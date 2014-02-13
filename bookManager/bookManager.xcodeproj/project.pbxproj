@@ -81,6 +81,7 @@
 		38D1380F18A36D1B00106520 /* DBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D1380E18A36D1B00106520 /* DBCategory.m */; };
 		38D1381218A36D1B00106520 /* DBBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D1381118A36D1B00106520 /* DBBook.m */; };
 		38D1381518A36D1B00106520 /* DBAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D1381418A36D1B00106520 /* DBAuthor.m */; };
+		38F92FE318ACF832004E8497 /* AuthorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F92FE218ACF832004E8497 /* AuthorsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		38D1381118A36D1B00106520 /* DBBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBBook.m; sourceTree = "<group>"; };
 		38D1381318A36D1B00106520 /* DBAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAuthor.h; sourceTree = "<group>"; };
 		38D1381418A36D1B00106520 /* DBAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAuthor.m; sourceTree = "<group>"; };
+		38F92FE118ACF832004E8497 /* AuthorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorsViewController.h; sourceTree = "<group>"; };
+		38F92FE218ACF832004E8497 /* AuthorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +280,8 @@
 				38D1370118A35B8800106520 /* AppDelegate.h */,
 				38D1370218A35B8800106520 /* AppDelegate.m */,
 				38D1370418A35B8800106520 /* Main.storyboard */,
+				38F92FE118ACF832004E8497 /* AuthorsViewController.h */,
+				38F92FE218ACF832004E8497 /* AuthorsViewController.m */,
 				3811B58C18A925CD0018A61B /* AddBookViewController.h */,
 				3811B58D18A925CD0018A61B /* AddBookViewController.m */,
 				38058AA518AA81E8004C9264 /* BooksViewController.h */,
@@ -624,6 +629,7 @@
 				38D1380418A361E100106520 /* MagicalRecord+iCloud.m in Sources */,
 				38D1380718A361E100106520 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				3811B58E18A925CD0018A61B /* AddBookViewController.m in Sources */,
+				38F92FE318ACF832004E8497 /* AuthorsViewController.m in Sources */,
 				38D137F818A361E100106520 /* NSManagedObject+MagicalFinders.m in Sources */,
 				38058AA718AA81E8004C9264 /* BooksViewController.m in Sources */,
 				38D137F318A361E100106520 /* NSObject+MagicalDataImport.m in Sources */,

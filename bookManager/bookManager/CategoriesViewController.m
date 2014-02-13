@@ -149,11 +149,14 @@
 - (IBAction)editPressed:(id)sender {
     if (!self._tableView.editing) {
         self._tableView.editing = YES;
-        ((UIBarButtonItem *)sender).title = @"Done";
+//        ((UIBarButtonItem *)sender).title = @"Done";
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
     }
     else {
         self._tableView.editing = NO;
-        ((UIBarButtonItem *)sender).title = @"Edit";
+//        ((UIBarButtonItem *)sender).title = @"Edit";
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+
     }
 }
 
