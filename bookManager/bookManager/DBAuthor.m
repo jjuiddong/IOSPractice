@@ -40,6 +40,7 @@
     NSInteger passedId = [[aDictionary objectForKey:@"authorId"] intValue];
     if (passedId == 0) {
         NSInteger maxId = [[DBBook MR_aggregateOperation:@"max:" onAttribute:@"authorId" withPredicate:nil inContext:localContext] intValue];
+//        NSInteger maxId = [[DBAuthor MR_aggregateOperation:@"max:" onAttribute:@"authorId" withPredicate:nil inContext:localContext] intValue];
         newEntity.authorId = [NSNumber numberWithInt:(maxId + 1)];
     }
     

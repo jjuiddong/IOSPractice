@@ -129,6 +129,8 @@
         [authorDict setObject:[words componentsJoinedByString:@" "] forKey:@"lastName"];
         
         DBAuthor *newAuthor = [DBAuthor createEntityWithDictionary:authorDict];
+        NSInteger cnt = [_authors count] + 1;
+        newAuthor.authorId = [NSNumber numberWithInteger:cnt];
         [_authors insertObject:newAuthor atIndex:0];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self._tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];

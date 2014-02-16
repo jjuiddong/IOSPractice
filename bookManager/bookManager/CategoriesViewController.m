@@ -126,6 +126,9 @@
     if (buttonIndex == 1) { 
         NSString *categoryName = [[alertView textFieldAtIndex:0] text];
         DBCategory *newCategory = [DBCategory createEntityWithDictionary:[NSDictionary dictionaryWithObject:categoryName forKey:@"categoryName"]];
+        NSInteger cnt = [_categories count] + 1;
+        newCategory.categoryId = [NSNumber numberWithInteger:cnt];
+        
         [_categories insertObject:newCategory atIndex:0];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [self._tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
