@@ -384,7 +384,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="n2F-0z-tEg" kind="push" identifier="ShowCategory" id="qCQ-1R-qzM"/>
+                                            <segue destination="n2F-0z-tEg" kind="push" identifier="SelectCategory" id="qCQ-1R-qzM"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -408,7 +408,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="n2F-0z-tEg" kind="push" identifier="ShowAuthor" id="FuJ-yp-UYX"/>
+                                            <segue destination="n2F-0z-tEg" kind="push" identifier="SelectAuthor" id="FuJ-yp-UYX"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -754,8 +754,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="st6-8h-zIt"/>
         <segue reference="uMM-cm-FXV"/>
+        <segue reference="st6-8h-zIt"/>
         <segue reference="FuJ-yp-UYX"/>
     </inferredMetricsTieBreakers>
 </document>
